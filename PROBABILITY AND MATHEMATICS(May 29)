@@ -14,7 +14,6 @@ To analyze and predict the likelihood of customers liking, purchasing, and respo
     Later if the product is liked by the customers:
     1. If we increase the price, what is the probability that purchases will drop?
 
-
 # BASIC IDEA 
 
 1. PROBABILITY: 
@@ -24,7 +23,6 @@ To analyze and predict the likelihood of customers liking, purchasing, and respo
             0 is not likely to happen
             1 is likely to happen
             0.5 (between) there is an equal chance of event happening or not happening
-
 
     Explaning the above questions:
 
@@ -224,8 +222,6 @@ To analyze and predict the likelihood of customers liking, purchasing, and respo
                 Consider the Price of the Product
 
                     X1 and X2 can be the range of values 
-
-
 
 4. PROBABILITY DISTRIBUTIONS
 
