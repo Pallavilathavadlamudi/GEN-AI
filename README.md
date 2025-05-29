@@ -1,1 +1,1 @@
-# GEN-AI
+May 29 - Probability; Random Experiment; Random Variable; BASIC OUTCOME; SAMPLING SPACE; EVENT; FUNCTIONS; PROBABILITY DISTRIBUTIONS
