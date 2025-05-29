@@ -3,7 +3,7 @@
 PROBLEM STATEMENT: 
 To analyze and predict the likelihood of customers liking, purchasing, and responding to a new product and its related variants?
 
-#Questions:
+# Questions:
     1. Do customers like this product?
     2. Do customers get (buy) this product?
     3. What is the probability that a customer will return to buy again?
