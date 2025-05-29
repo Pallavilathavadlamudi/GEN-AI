@@ -1,1 +1,187 @@
+# PRODUCT ADOPTION MODEL
+
+PROBLEM STATEMENT: 
+To analyze and predict the likelihood of customers liking, purchasing, and responding to a new product and its related variants?
+
+#Questions:
+    1. Do people like this product?
+    2. Do people get (buy) this product?
+    3. What is the probability that a customer will return to buy again?
+    4. What’s the chance a person will recommend this product to others?
+    5. What’s the probability of profit/loss after launching the product?
+    6. What happens when we implement a family of this product in the market?
+    
+    Later if the product is liked by the people:
+    1. If we increase the price, what is the probability that purchases will drop?
+
+
+# BASIC IDEA 
+
+1. PROBABILITY: 
+
+    Is a meaasure of how likely something is to happen 
+        1. It is a number bwtween 0 and 1  
+            0 is not likely to happen
+            1 is likely to happen
+            0.5 (between) there is an equal chance of event happening or not happening
+
+
+    Explaning the above questions:
+
+    Consider a survey taken from the 100 people. 
+
+    1. Do people like this product? (this question estimates how many customers liked the product)
+
+            Probability :  Number of people liked the product / Total number of people visited the product
+                = 75/100 = 0.75
+
+    2. Do people get (buy) this product? (this question estimates how many people actually purchased the product)
+
+            Probability : Number of people purchased/ Number of people liked the product
+                = 30/75 = 0.4
+
+    3. What is the probability that a customer will return to buy again? (this question estimates whether the customer rebuys the product or not)
+
+            Probability : Number of people wanted to rebuy / number of people once purchased
+                = 15/30 = 0.5
+
+    4. What’s the chance a person will recommend this product to others?(this question estimates do really customer suggest to the other people)
+
+             Probability : Number of customers suggested / Number of people purchased
+                = 10/30 = 0.33
+
+2. RANDOM EXPERIMENT: 
+
+    It is process that leads to one outcome from possible outcomes. where we dont know in advance which outcome will occur.
+
+    Related to the problem statement:
+       
+        Each customer interaction with the product can be seen as a Random Experiment (Notice, Like, buy, rebuy, recommend)
+
+        Each Question = A random Experiment 
+            The outcome would be 
+                1. Noticed / Didnot Noticed 
+                2. Liked / Didnot Liked
+                3. Buy / Didnot Buy
+                4. Recommend / willnot recommend
+
+3. RANDOM VARIABLE:
+
+        Is a function that assigns a numerical value to each outcome of a random experiment. 
+    
+    TYPES: 
+    1. DISCRETE RANDOM VARIABLES: 
+
+        Variables that can take countable values such as 1,2,3,...
+
+            Related to the problem statement:
+            
+                1. Number of people liked product
+                2. Number of purchases
+                3. Number of Recommendations
+
+    2. CONTINUOUS RANDOM VARIABLES:
+     
+        Variables that can take an infinite number of values in a given range.
+    
+            Related to the problem statement:
+
+                1. Money Spent
+                2. Customer Satisfaction
+
+4. BASIC OUTCOME, SAMPLING SPACE, EVENT: 
+
+    1. BASIC OUTCOME: 
+
+        Is a most specific result of a random experiment(any one of the possible outcome from a random experiment)
+    
+    2. SAMPLING SPACE(S): 
+
+        The set of all possible outcomes for any random experiment is called Sampling Space.
+    
+    3. EVENT(E):
+    
+        The outcome of any experiment is called an event. (E)
+
+    Related to the problem statement:
+
+        1. Do people like this product?
+            Basic outcome: {like},{Don't like}
+            Sampling Space: S = {like, Don't like}
+            Event: E = {Like} -> customer like the product.
+        
+        2. Do people buy this product?
+            Basic outcome: {Buy},{Don't buy}
+            Sampling Space: S = {buy, Don't buy}
+            Event: E = {Buy} -> Customer buys the product.
+
+        3. Will customer buy again?
+            Basic outcome: {rebuy},{Don't rebuy} / return
+            Sampling Space: S = {rebuy, Don't rebuy} / return
+            Event: E = {rebuy} -> customer rebuys the product.
+
+        4. Will customer recommend?
+            Basic outcome: {recommend},{Don't recommend}
+            Sampling Space: S = {recommend, Don't recommend}
+            Event: E = {Dont recommend} -> Customer doesnot recommend the product.
+
+        5. How much will a customer spend?
+            Basic outcome: {10},{20},{30}
+            Sampling Space: S = {any real number > 0 }
+            Event: E = {30} -> Customer spends 30$ on the product.
+
+        6. What rating will customer give?
+            Basic outcome: {1},{2},{3}
+            Sampling Space: S = {1,2,3,...,10}
+            Event: E = {8} -> Customer gives rating for product as 8. 
+
+# FUNCTIONS 
+
+1. PROBABILITY MASS FUNCTION: 
+       
+        Is a function that gives the probability that a discrete random variable is exactly equal to some value.
+        
+                        pX(x)=P(X=x)
+
+            Related to the problem statement:
+
+            Consider the Survey of 100 people 
+                Consider the results as 
+                    1. 20 people didn’t buy at all (0 times)
+                    2. 50 people bought once
+                    3. 20 people bought twice
+                    4. 10 people bought three times
+
+                Consider the result as 
+                    1. 15 people didnot rate the product
+                    2. 20 People gave 1 star rating
+                    3. 20 people gave 2 star rating
+                    4. 15 people gave 3 star rating
+                    5. 25 people gave 4 star rating
+                    6. 5 people gave 5 star rating
+                    
+            Question
+
+            1. How many times did the people buy the product?
+
+                Consider X = Number of times a person bought the product in month
+                Possible values(0,1,2,3)
+
+                pX(x)=P(X=x)= Number of people who bought x times/Total number of people surveyed
+
+                p(0) = 20/100 = 0.2 (didnot buy) 
+                p(1) = 50/100 = 0.5 (bought once)   
+                p(2) = 20/100 = 0.2 (bought twice)
+                p(3) = 10/100 = 0.1 (bought thrice)
+
+            2. How did customers rate the product?
+                
+                pX(x)=P(X=x)= total number of people rate the product / Total number of people surveyed
+
+                p(0) = 15/100 = 0.15
+                p(1) = 20/100 = 0.2
+                p(2) = 20/100 = 0.2
+                p(3) = 15/100 = 0.15
+                p(4) = 25/100 = 0.25
+                p(5) = 5/100 =  0.05
 
